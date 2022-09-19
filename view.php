@@ -5,7 +5,10 @@
 for($j = 1; $j<=12; $j++)
 {
 	
-	//If the j value is a single digit, we add 0 to the beginning so that the j value corresponds to the month value in the database query
+	//In order to find the total payments for the months in the database query and for the sql query to work correctly
+	//If the j value is single digit, we add 0 to the beginning.
+	//(For example, if j is 1, we add 0 to the beginning of the j value and make the new value 01.)
+	//Then we transfer this new value to the variable named m.
 	if(strlen($j)<2)	 
 		$m = "0".$j; 	
 	else	 
